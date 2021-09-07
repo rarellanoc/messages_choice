@@ -1,0 +1,734 @@
+
+*label desarrollo_personal
+
+
+Te quedan  ${horas} horas en la sala del tiempo. 
+
+*set horas -3
+
+Al terminar te quedarán solo ${horas} horas en la sala. 
+
+*choice
+  
+ #Ver tabla de contenidos
+
+    Tabla de contenidos
+
+    - El estrés ……..pag 5
+
+    - El molde ……pag 120
+
+    - El secreto …..pag 180
+
+    - El balance del apostador …pag 220
+
+    - Platonico …pag 250
+
+    *goto opinion1
+    
+ #Ver reverso del libro
+    
+    Digamos que estas trabajando. 
+
+    Pero quieres descansar. 
+
+    Y cuando descansas
+
+    Estas pensando en trabajar. 
+
+    Esta es la definición clásica de estrés. 
+    
+    *goto opinion1
+  
+ #Salir al patio, devolver el libro
+   
+    *set horas +2
+    
+    Caminar a tomar aire fresco. Estas al inicio. 
+    
+    Estas 1 hora en el patio. 
+    
+    Te quedan ${horas} horas. 
+    
+    *goto_scene biblio
+
+
+*label opinion1
+*choice 
+  
+  #Abrir el libro
+    
+    El estrés apesta. 
+    
+    Es un ciclo dificil de romper. 
+    
+    Pero creo que se puede. 
+    
+    El estrés es una palabra inventada y traida desde lo estructural, que se ha vuelto popular en el ambito médico. Quizas refleja algo que antiguamente llamaban melancolía, un desgano, o una suerte de infelicidad, pero enmascarada como algo común por estos dias. Como patología médica. 
+    
+    Este viaje es un llamado para romper esos habitos mentales y crear otros, otros mas saludables. 
+    
+    
+    
+    *set blaming_it +1
+    
+    *goto intro2
+    
+  #Volver a la bandeja de entrada
+    
+    *goto_scene msg
+    
+
+  
+  
+*label intro2
+
+*comment false choice, gather point
+*choice 
+  
+  #Buena, me tinca
+    
+    Debemos ser pacientes, 
+    
+    Por ahora.
+    
+    Este es un viaje
+    
+    *set blaming_it +1
+    
+    *goto intro3
+    
+  #Adelantarme al capítulo 2
+    
+    *set oblivious +1
+    
+    Es bueno apoyarse en la comunidad. Si existe un apoyo es algo que no todos tienen. 
+    
+    Pero la comunidad se puede volver en nuestra contra. No literalmente, pero como molde del cual no podemos salir. 
+    
+    Muchas reglas. 
+    
+    Muchos compromisos. 
+    
+    Y bueno. 
+    
+    Partamos por algo. 
+    
+    No podemos cambiar a toda la comunidad, pero podemos hacer algo mejor 
+    
+    Tener conciencia de nosotros mismos. Hacer nuestro trabajo primero antes de esperar que los otros cambien. 
+    
+    *goto intro3
+  
+  
+*label intro3
+
+Pero solo puedo indicar algunos caminos, no atravesarlos por ti. 
+
+*comment false choice, gather point
+*choice 
+  
+  #Seguir al siguiente capitulo
+    
+    Capitulo tres: El secreto
+   
+    *set blaming_it +1
+    
+    *goto intro5
+    
+  #No comprendo. Preguntar al bibliotecario de que va este libro. 
+    
+    
+    Discule Señor. Me puede explicar cual es el publico objetivo de este libro?
+    
+    
+    El blibliotecario habla…
+    
+    No te voy a mentir. 
+    
+    El contexto mayor es el desarrollo como persona. O recordar elementos que sabes que tienes, pero que habias olvidado. 
+    
+    Si no te motiva aquel libro lo puedes devolver. 
+    
+    Aún así, puedo ver ciertas cosas sobre ti. 
+    
+    *set oblivious +1
+    
+    *goto intro4
+  
+  
+*label intro4
+
+*choice
+  
+  #Conversar
+    
+    Quiero compartir un secreto contigo. 
+    
+    Promete no contarlo a viva voz a todos. 
+    
+    OK.
+    
+    *goto secret
+    
+  #Seguir con el siguiente capítulo
+    
+    *goto 51-49
+  
+  
+  #Devolver el libro
+    
+    Bien. 
+    
+    Te quedan ${horas} horas en la sala
+    
+    *goto_scene biblio
+   
+
+*choice
+  
+
+  #Escuchar
+    
+    *label intro5
+    
+    *if blaming_it >1 
+      
+      El sistema apesta, pero tiene su lado bueno igual 
+      
+      las maquinas no son el enemigo. 
+      
+      Creo que quizas eres tu peor enemigo. 
+      
+      Tu peor crítico. 
+      
+      Y aveces atraemos en nuestra vida un reflejo de nosotros mismos. Personas que jueguen de la misma forma, para bien o para mal. 
+      
+    *if oblivious > 1
+      
+      Estás algo dormido, Desde acá puedo reconocer tu freccuencia baja. 
+      
+      Entonces
+      
+      Despertemos un poco. 
+      
+      Con algo un poco revelador. 
+    
+    No me gusta contar mis secretos mas profundos, pero aqui va. 
+    
+    Si estas en una relación que parece platonica o completa, estas en problemas. 
+    
+    Lo menciono porque lo estuve. 
+    
+    *label secret
+    
+    El secreto es, que hay SOLO DOS formas de relacionarnos. 
+    
+    Una en que TU te sientes COMPLETO, y la otra en la que YO me siento completo. 
+    
+    No podemos estar ambos al mismo tiempo. 
+    
+    Y eso el mejor de los casos, por supuesto. 
+    
+    Pero la idea es enfocarse en lo bueno cierto?
+    
+    Pero la ley es estable igual.
+   
+    La llamo la ley del 51:49
+    
+    *choice
+      
+      #Expandir el tema de la ley
+        
+        *label 51-49
+        
+        Capitulo 4 - El balance del apostador
+        
+        ….
+        
+        51:49 viene de ver las cosas como las vería un inversionista, a diferencia del apostador. 
+        
+        El apostador aspira a ganar 70:30, es decir, 70 ganadas y 30 perdidas, en general. 
+        
+        Pero esto es demasiado optimista y la casa siempre gana. Termina siendo 49:51
+        
+        Puede ganar aveces, pero a largo plazo termina perdiendo. 
+        
+        49% ganadas
+        51% derrotas
+        
+        La contraparte no quiere 70%
+        
+        Eso seria desastroso a la hora de pasar desapercibido.
+        
+        Ellos solo quieren 51, no ganar por mucho, pero ganar SIEMPRE por ese pequeño margen. 
+        
+        Tienes que dar vuelta este concepto.
+        
+        Y jugar 51:49
+        
+        Cuando tengas la duda sobre algo. 
+        
+        Recuerda, es 49:51 o 51:49? 
+        
+        *choice
+          
+          #wow. Lo tengo
+            Bien
+            
+            *goto perfect_ending
+          
+          #Aprender más
+            
+            Mas
+            
+            *goto stop_for_now
+      
+      
+      #Saltarse al capitulo 5
+        
+        Capítulo 5:  Platónico 
+       
+        ….
+        
+        Que hay de mal en algo platónico o completo?
+        
+        Una relación a simple vista perfecta, pero sin pasión o con un pesar constante. 
+        
+        Esto es porque muchas juegan con los hombres con el fin de aparentar ser buenas, por el miedo de ser juzgadas de cierta forma. 
+        
+        Tengo muchas experiencias en este ámbito. No lo comprenderías…
+        
+        Pero es un juego de apariencias, finalmente. 
+       
+        Si quieres saber mas, solo dime. 
+        
+        *choice
+          
+          #Saber mas
+            
+            Bienvenido, estas del lado de la sociedad secreta. 
+            
+            Este es nuetro pacto. 
+            
+            Solo debes mantener esta información bajo el radar. 
+            
+            Lo tienes?
+            
+            *choice 
+              
+              #Lo tengo
+                
+                Bien. 
+                
+                *goto stop_for_now
+                
+              #Explicame mas, por que tano secretismo?
+                
+               Los buenos consejos son distintos a la sabiduría popular. 
+                
+               Piensa en la pelicula OJOS BIEN CERRADOS, del afamado director Stanley Kubrik, 
+                
+               Las sociedades secretas existen. 
+                
+               Una de ellas es la de los Artistas de ABORDAR. 
+                
+               No muy conocida, pero muy efectiva, y con muchos hombres que desean ser parte. 
+               
+               Son hombres que APRENDEN como ser verdaderos casanovas, y brindar la mejor experiencia a las mujeres con las que se encuentran. 
+               
+               Estos secretos no son revelados a todos, pero estás en el lugar correcto. 
+               
+                
+               *choice
+                  
+                #Quiero saber más
+                    
+                    Buena!
+                    
+                    *goto perfect_ending
+                #Lo tengo, pero no es para mi
+                    
+                  Buena!
+                    
+                  *choice
+                      
+                   #Aprender más
+                        
+                     More
+                        
+                     ….
+                        
+                     *goto stop_for_now
+                        
+                   #Salir del secretismo 
+                        
+                     *goto_scene biblio
+                    
+                    
+          #Volver
+                
+            *goto 51-49
+                
+            
+       
+          
+          
+            
+            
+        
+      #Aprender la aplicación del secreto
+        
+        Buena, estas más lejos que muchos. 
+        
+        Pero podria apostar que estas austado aun. 
+        
+        El mundo es grande y vasto. Imposible de viajar a todas partes. Imposible de quebrantar o usarlo a nuestro favor aveces. 
+       
+        Me sentía asi al inicio
+        
+        El mundo era un lugar PELIGROSO. 
+        
+        Me molestaba por ejemplo cuando alguien jugaba a SU manera
+
+        Me molestaba fácil en verdad. 
+        
+        Pero cuando cambié, hacia un estado mental mas Zen. Estaba abierto a recibir el MUNDO. No batallarlo. 
+        
+        Cómo superé eso?
+        
+        Al distinguir entre COLAPSO Y POSE
+        
+        *choice 
+          
+          # Aprender más
+            
+            Colapso en cuando todo se va a la B. 
+            
+            Ya fuimos derrotados por fuerzas que no podemos entender. 
+            
+            Un golpe occulto de una fuente que no podemos ni definir. 
+            
+            
+            
+            Luego, LA POSE. 
+            
+            Actuar como si el mundo no pudiese afectarme. Como una roca. 
+            
+            Pero todos ven que es solo una FACHADA. Lo peor, tu tambien puedes verlo. 
+         
+            Sabes que quieres algo mas. 
+            
+            No solo estar rigido todo el tiempo. 
+            
+            
+            …
+            
+            Tiendes a colapsar y arreglar las cosas. 
+            
+            O tiendes a POSAR, a mostrar una forma rigida, intocable, a pesar de que no sea asi? 
+           
+            
+            *choice
+              
+              #Tiendo a colapsar
+                
+                Colapso es causado por falta de integridad. 
+                
+                
+                Tienes que asentarte donde estás. 
+                
+                Pero no te preocupes. 
+                
+                Estás en el lugar correcto. 
+                
+                
+                *goto perfect_ending
+              
+              #Tiendo a posar
+                
+                Posar es causado por falta de apreciación, y tambien por falta de presencia. 
+                
+                Siempre digo que es apreciacion porque tiene que ver con apreciar las cosas no tan lindas. 
+                
+                Es mas bien reconocer que hay cosas que nos gustan y cosas que no. 
+                
+                Y realmente disfrutarlas cuando si nos gustan. 
+                
+                Pero igual de importante es
+                
+                Estar OK cuando las cosas no van como quisieramos. 
+                
+                Si posamos es porque hay algo que queremos ocultar. Una reacción no grata. 
+                
+                Te ves bien, pero te cierras del mundo. 
+                
+                No lo vives a concho. Tienes miedo en cierto sentido. 
+                
+                Pero podemos aprender a integrar esas sensaciones y incorporar el mundo en nuestras vidas.
+                
+                Abrir la puerta a experiencias diferentes, incluso las no tan gratas. 
+                
+                
+                
+                *choice
+                  
+                  #Lo capto completamente
+                    
+                    *goto perfect_ending
+                  
+                  #Aún algo no me cuadra
+                    
+                    El viaje es extenso. Hay sacrificios involucrados. 
+                    
+                    Pero estas a salvo. 
+                    
+                    Estas aqui al menos. 
+                    
+                    Muchos ni si quiera saben que les falta algo. 
+                    
+                    La clave es tener conciencia en todo. 
+                    
+                    
+                    
+                    
+                    
+                    *choice
+                      
+                      #Aprender como tener conciencia
+                        
+                        Nos gustaria tener mas opciones.
+                        
+                        Pero lo que en verdad queremos es elegir. 
+                        
+                        Y para elegir, es necesario estar consciente. 
+                        
+                        Conciencia = Elección
+                        
+                        
+                        
+                        
+                        …………..
+                        
+                        *goto stop_for_now
+                        
+                        
+                      #Salir
+                        
+                        *finish
+                      
+                      
+                    
+                    
+                    
+                    
+                    
+                    
+              
+          #Solo dos opciones?
+
+            En realidad no. 
+            
+            La tercera opción es la que buscamos. El filo de la navaja. 
+            
+            LA COMPOSTURA.
+            
+            
+            *choice
+              
+              #Quiero tener mas compostura
+               
+                Ideal 
+                
+                Si ya tienes claro que por un lado te caes hacia POSAR por ejemplo, puedes mover el péndulo hacia el lado de COLAPSO, Lo puedes practicar colapsando aproposito. Solo para inclinar las cosas hacia el centro. Y viceversa, por supuesto. 
+                
+                *goto perfect_ending
+              
+              # Compostura ante que?
+                
+                Perfecto. 
+                
+                Las interacciones fuertes o acaloradas, el conflicto pueden ser una fuente de energía para ti. 
+                
+                A pesar de que no sean lo mas grato, puedes mantenerte firme ante ellas. 
+              
+                *goto stop_for_now
+            
+            
+
+            
+                
+      #Devolver el libro. 
+        
+        Solo tu puedes cruzar los umbrales. 
+        
+        *goto_scene biblio
+        
+       
+      
+    Ese es nuestro juego.
+    *finish
+    
+  #COMPRAR el libro
+    
+    Este curso te va a hacer sentir GENIAL acerca de tu desarrollo y FACILITAR muchas mas interacciones que puedas distrutar, en cualquier aspecto de tu vida. 
+   
+    
+    *label course_page
+    
+
+    CURSO. 50 USD
+    
+    
+    *choice 
+      
+      # Pagar con PAYPAL ahora
+
+        *if money > 35000
+
+          Compra exitosa
+
+          *goto perfect_ending
+
+        Hubo un problema con tu método de pago. 
+        
+        
+
+        *goto stop_for_now
+
+      #Aplicar a una beca
+
+        Becas. 
+        
+        Déjanos tu correo. 
+        
+        *finish 
+      
+      
+
+      # Exit
+
+        Chao.
+
+        *finish
+
+    
+  
+  
+  #Ignorar
+    
+    Solo miembros
+    
+    1 USD para ser miembro del club. 
+    
+    *goto stop_for_now
+    
+  #Salir de este lugar
+    
+    No podemos forzar a una flor a florecer
+    
+    Lo mejor!
+    
+    *finish
+  
+  
+  
+*label stop_for_now
+
+Hay trabajo por hacer
+  
+CAMBIOS reales son raros. 
+ 
+*choice
+  
+  
+  #Aceder a a nuevos libros
+    
+    *set money -795
+    
+    Tienes ${money} en tu cuenta del estudio
+    
+    
+    
+    
+    …
+    
+    Bienvenido. 
+    
+    *label courses
+    
+    LIBROS DISPONIBLES:
+    
+    *choice
+      
+      #LOS FRAGMENTOS DEL JUEGO , PARTE II
+        
+        *goto_scene biblio
+        
+      #LA BUSQUEDA DE LO AUTÉNTICO, PARTE II
+        
+        *goto_scene biblio
+        
+        *choice
+          
+          #Volver
+            
+            Volver
+            
+            *goto courses
+          
+          #Salir
+            
+            *finish
+        
+        
+    
+        
+    
+    *finish
+  
+  
+  
+    
+  #Ir a los libros actuales
+      OK
+      *goto_scene biblio
+    
+    
+    
+  #SALIR
+      OK
+      *finish
+  
+  
+    
+    
+*label perfect_ending
+
+…………
+
+
+Ya sabes lo que significa estar BALANCEADO.
+
+No era algo tan misterioso, pero requirió un ajuste en algunos aspectos. Estar consciente de algunos actos. 
+
+……….
+
+
+Este viaje ha temrinado, pero simboliza el inicio de un nuevo viaje para ti. 
+
+Tenlo presente. 
+
+Actua HOY. Usa tus herramientas. 
+
+*set msg_step 3
+*set msg_count 1
+
+
+*goto_scene biblio
+
+
+*finish
+
+
+*finish

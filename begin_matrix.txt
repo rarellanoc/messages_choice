@@ -1,0 +1,459 @@
+
+
+Te quedan  ${horas} horas en la sala del tiempo. 
+
+*label begin_matrix
+
+*set horas -4
+
+Al terminar te quedarán solo ${horas} horas en la sala. 
+
+Max se encuentra en la oficina del guardia de una estación de trenes subterraneos. 
+
+Esta encerrado al parecer. 
+
+
+
+*choice
+  #Indagar por qué Max está encerrado
+    
+    Encuentras una nota. 
+    
+    Te dejé encerrado, te cuento la verdad en la carta que está en el sobre. 
+    
+    *choice
+      
+      #Leer
+    
+        Ok, 
+        
+        Te dejé encerrado por que creo que tomaste algo que no pertenecía. 
+        
+        Pero tengo algo para ti que te puede servir mas que lo que tomaste. 
+        
+        Es esto: 
+        
+  
+        
+        Debes cortar esa dependencia amigo. 
+        
+        Tomalo como un recordatorio. 
+        
+        Policia del ministerio de propiedad intelectual.
+        
+        *choice
+          #Volver a la tabla de contenidos
+            
+           Antes de devolver el libro, puedes explorar los capitulos que no has visto.   
+            
+           *choice
+             
+             #2
+               
+               *goto LOSER
+             
+             #3
+               
+               *goto fragments
+             
+             #4
+               
+               *goto abb
+            
+          #Salir de la sala
+            
+            Cuídate!
+            
+            Rick.
+            
+            ….
+            
+            REINICIANDO EL PROGRAMA
+            
+            …
+            
+            *goto_scene startup
+        
+      
+      #Intentar salir sin leer la carta
+        
+        La puerta esta trancada. 
+        
+        El teléfono suena. 
+        
+        *goto LOSER
+        
+        
+    
+    *finish 
+    
+  #Avanzar al dialogo
+    
+    *label LOSER
+    
+    Ring ring. 
+    
+    - Que pasó?
+    
+    -  Puede sonar algo obvio o algo extraño para ti lo que te voy a decir. 
+    
+    - Dime
+    
+    - Está bien, 
+    
+    Partamos con lo básico. Tal vez lo he dicho en otras partes…
+    
+    - No lo recuerdo, pero dale. 
+    
+    -  La verdad es que somos como dos PIANOS Tenemos cierto poder sensitivo. 
+    
+    - No entiendo
+    
+    - Mira, Estamos conectados. 
+    
+    - Segura? Como asi?
+    
+    - Si toco una nota AQUÍ, Digamos que me siento de cierta forma. Tu resuenas EN LA MISMA PARTE. Te sientes de la misma forma cuando estas aqui conmigo. 
+    
+    Te sientes distinto solo por el hecho de estar aqui. Se que estas encerrado, pero iré por ti. 
+   
+    
+    - Puedes…explicame quien eres…
+    
+    - (corta)…
+    
+    
+    
+    
+    La puerta suena. 
+    
+    Knock knock. 
+    
+    Ella abre el cerrojo y te invita a salir. 
+    
+    *choice
+      
+      #Pedirle mas info sobre la idea del estar conectados
+        
+        - A qué te referías en la llamada?
+        
+        - Es una larga historia, pero.
+        
+        SIGNIFICA QUE NO TE PUEDES ESCODER. 
+        
+        Puedes correr, pero no esconderte, decía el dicho. 
+        
+        Voy a tomar un pequeño camino alterno. 
+        
+        Estás familiarizado con EL JUEGO, cierto?
+        
+       
+        
+        *choice
+          
+          #Me suena
+            
+            BIEN, ¿el juego externo te ha servido en tus andanzas?
+            
+            ¿Te ha dado lo que esperabas?
+            
+            *choice 
+              #No tanto. Creo que he resuelto cosas. Pero no todas. 
+                
+                Bien, lo unico que te pido es que no pierdas el libro: 
+                
+                Cual libro.
+                
+                
+                Aquel que esta en tu mesa:
+                
+                *choice
+                  
+                  #Tomarlo e ir a otro lugar
+                    
+                   *goto_scene start_2
+                  
+                  #Abrir libro
+                    
+                    *label fragments
+                    
+                    OK. 
+                    
+                    Desde los años 2000 mucha literatura sobre abordar volvió a la superficie. 
+                    
+                    El principal autor en los ultimos 15 años nos mintió un poco. 
+                    
+                    El nunca se retiró del juego. 
+                    
+                    El quiso matar el juego. 
+                    
+                    Quería ser la principal fuente de conocimiento. 
+                    
+                    Asi de simple. 
+                    
+                    El tema es:
+                    
+                    No se puede matar, pero tampoco revitalizar. 
+                    
+                    El juego está en ruinas. 
+                    
+                    EL JUEGO ES UNA RUINA. 
+                    
+                    Que significa eso en términos prácticos. 
+                    
+                    Significa que te debes olvidad de la seducción, de la conquista, y de los metodos. 
+                    
+                    
+                    
+                    *choice 
+                      
+                      #Comprendo
+                        
+                        Good
+                        
+                        *goto_scene start_2
+                        
+                      # Interesante, pero por que esto HOY?
+                        
+                        Bien. Porque el camino del JUEGO lleva a el camino de LA AUTENTICIDAD. 
+                        
+                        El llamado juego interno. 
+                        
+                        *goto_scene start_2
+                    
+         
+              #Me cambió la vida.
+                
+                Wow. Genial escuchar eso. 
+                
+                Te sientes parte del movimiento? 
+                
+                *choice
+                  
+                  #SI
+                    
+                    Bien. tienes un nuevo libro desbloqueado. 
+
+                    
+                    *goto_scene biblio_updated
+                    
+                  # NO TANTO. Aun veo partes incomodas de mi mismo. 
+                    
+                   Lo tengo, te recomiendo: 
+                    
+                    
+                   Integridad. 
+                    
+                   *choice
+                      
+                    #Suena perfecto. Lo quiero. 
+                        
+                      LINK (pronto)
+                     
+                      
+                      *goto_scene biblio_updated
+                        
+                    #Dame el resumen para ver si me interesa. 
+                      
+                      *label abb
+                        
+                     El quid es que NO PODEMOS COPIAR
+                      
+                     PODEMOS TRATAR
+                      
+                     Lo intenté con un jugador maestro. Copiar al jugador maestro. 
+                      
+                     
+                      
+                     No funcionó del todo. 
+                      
+                     Te puedo contar. 
+                      
+                     *choice
+                        
+                        #Dime
+                          
+                         El jugador maestro no era un tenista o un participante de un juego finito que empieza y temrina en cierto tiempo. Era un jugador infinito. 
+                         
+                         *goto_scene biblio_updated
+                          
+                        # Suena algo irrelevante desde acá. 
+                          
+                         Bien. Tal vez quieras volver a los articulos FUNDACIONALES. 
+                          
+                         *goto_scene start_3
+                         
+          
+          #NO ENTIENDO. A QUE JUEGO TE REFIERES? 
+            
+            A la conquista. Las artes venusianas. El arte de conocer personas y empezar relaciones. 
+            
+            Te gustaría mejorar tus relaciones no?
+            
+            *choice 
+              #Claro
+                
+                Bien.
+                
+                Esto es lo que tengo para ti.
+                
+                Desde los archivos.
+                
+                ….
+                
+                
+                *goto_scene start_3
+                
+              #Me siento completo en el area de las relaciones
+                
+                
+                Bien
+                
+                Puede interesarte esto: 
+                
+                LIBRO SOBRE INTEGRIDAD. 
+                
+                Un recurso para obtener cosas en todos los aspectos de tu vida, no tan solo relacional. 
+                
+                Tiempo de lectura: 2hrs. 
+                
+                *choice
+                  
+                  #Agregarlo a la bliblioteca. 
+                    
+                    Agregando. 
+                    
+                    *goto_scene biblio_updated
+                    
+                  #Rechazarlo 
+                    
+                    Libro no aceptado
+                
+                    *finish
+        
+        *finish
+        
+      #Pedirle la razón del encierro. 
+        
+        BUENO
+        
+       
+        TE ENCERRÉ porque estabas EN PILOTO AUTOMÁTICO. 
+        
+        Dormido, hasta ahora. 
+        
+        Quieres despertar?
+        
+        
+        
+        *choice
+          # Despertar, De seguro. 
+            Bien
+            
+            Debes salir de aqui y llamar a John. 
+            
+            …
+            
+            DEMO STOP (disponible en la versión completa)
+            
+            *goto_scene start_2
+            
+          # Que sueño? A que te refieres?
+            
+            Bueno, esta es como la Matrix, como la película. Es aun mas dificil de detectar, pero la sientes en tus huesos. Como una jaula. 
+            
+            
+            
+            *choice
+              #Si, lo siento en mis huesos
+                
+               Te creo, 
+               
+               - pero
+               
+               Como puedes saberlo realmente?
+                 
+              
+               
+               *choice
+                 
+                 #Simplemente siento algo
+                  
+                   Buen inicio
+                   
+                   *goto_scene start_2
+                 
+                 #No estoy seguro
+                   
+                   Genial, 
+                   
+                   *goto_scene start_3
+               
+              #No tan asi. Creo que estoy bastante consciente de lo que hago. 
+                
+               Y cómo te sientes?
+               
+               *choice 
+                 # Bastante bien
+                   
+                   Bien.
+                   
+                   Salgamos de aqui.
+                   
+                   La estacion era una estación abandonada. 
+                   
+                   La chica solo jugaba juegos contigo. 
+                   
+                   
+                   
+                   Más sobre el autor: 
+                   
+                   ….
+                   ———-
+                   
+                   Has desbloqueado un nuevo libro. 
+                   
+                   *goto_scene biblio
+                   
+                 #Algo cansado, no puedo dormir bien y no se por qué. 
+                   
+                   Quieres recuperar el sueño? 
+                   
+                   *choice
+                     
+                     #Si
+                       
+                       *goto_scene start_2
+                     
+                     #NO
+                       
+                       *finish
+          
+          
+          
+        
+        *finish
+      
+      
+  #Devolver el libro 
+    
+    
+    *set horas +3
+    
+    Tal vez a la noche me sirva. 
+    
+    Te quedan ${horas} horas en la sala
+    
+    *goto_scene biblio
+
+….
+
+este es el secreto. 
+
+Eres libre. 
+
+Vive tu vida. Estás desenganchado. Eres libre de vivir tu vida como te plazca. 
+
+Ya sabes que hacer, ya sabes que hacer. 
+
+*finish

@@ -1,0 +1,155 @@
+*label msg
+
+Bienvenido a la sala. 
+
+*if msg_count > 0 
+    
+  Tienes ${msg_count} mensaje nuevo de Rick Arellano
+  
+  *goto mail1
+ 
+*else
+  
+  Tienes ${msg_count} mensajes nuevos
+  
+  *goto mail1
+    
+    
+*label mail1
+*choice 
+      
+  #Leer
+    
+    *if msg_count > 0
+      
+      *if msg_step = 0 
+        
+        Buena!
+
+        No se si viste Dragon Ball, pero hay una parte en donde el personaje principal va a entrenar a una sala del tiempo, 
+
+        Ahi el tiempo transcurría de diferente forma. Una hora en la tierra son seis horas en ese lugar. Por ejemplo. 
+
+        Esto le permitía entrenar mientras transcurria la batalla. 
+
+        Me encanta ese concepto. 
+
+        Y me gustan los libros, obvio.
+
+        Me gustaria tener tiempo de leerlos. 
+
+        Asi que quise hacer una sala del tiempo. 
+
+        *set msg_count -1
+
+        *goto_scene biblio
+      
+      *elseif msg_step = 5
+         
+         Hola de vuelta.
+         
+         *set msg_count -1
+         
+         
+         
+         *goto_scene biblio
+      
+      *elseif msg_step = 1
+         
+         La sala del tiempo es como una sala alejada en las alturas. 
+    
+         Lo que veo es que tienes un patio y una bilbioteca. 
+    
+         Puedes leer los libros que están en la biblio, por ahora solo dos.
+         
+         Es la demo. jeje. 
+         
+         Suerte. 
+         
+         *set msg_count -1
+         *set msg_step 2
+         
+         
+         *goto_scene biblio
+       
+      *else
+         
+         Buena, has completado al menos un libro.
+         
+         Me alegra. 
+         
+         Si tienes dudas me mandas un mensaje real. 
+         
+         *set msg_count -1
+         *set msg_step 5
+         
+         *goto_scene biblio
+      
+    *else
+       
+       No hay mensajes por leer
+       
+       *choice
+         
+         #Volver
+           
+           *goto_scene msg
+         
+         #Reiniciar
+           
+           *goto_scene startup
+
+  #Borrar
+        
+       *set msg_count 0
+       
+       *goto_scene msg
+     
+     
+  #Escribir nuevo
+   
+    *if msg_step = 1
+      
+      Buena Rick, está bueno. 
+      
+      Cuéntame mas de que va el concepto de la sala del tiempo
+      
+      Saludos
+      
+      *choice
+        
+        #Enviar
+          
+          *set msg_count 1
+          
+          *goto_scene msg
+        
+        #Volver
+          
+          *goto_scene msg
+          
+          
+      
+      
+        
+    *else
+       
+       Hola mundo…
+       
+       *choice
+         
+         #Enviar
+           
+ 
+           *set msg_count 1
+           *set msg_step 5
+           *goto_scene msg
+         
+         #Volver
+           
+           *goto_scene msg
+         
+         
+  #Ver mas opciones guardadas
+     
+     *goto_scene biblio

@@ -1,0 +1,12 @@
+*label start_3
+
+Librería
+
+
+
+PRONTO (en desarrollo).
+
+*goto_scene start_2
+
+*finish
+

@@ -1,0 +1,93 @@
+*label biblio
+
+*choice 
+  
+  #Ir a la sala del tiempo
+    
+    
+   *label biblioteca
+    
+   Te dejé dos libros disponibles encima del estante, el resto está en camino (demo). 
+   
+   *choice
+   
+      
+     #51_49
+       
+       Este es como un recorrido por la raiz del estrés, y como aplicar prácicas para lograr un balance tipo zen. 
+       
+       Igual tiene que ver con abordar, al final. 
+      
+       tiempo de lectura 3 hrs
+      
+       *choice
+        
+         #Leer
+      
+          *goto_scene desarrollo_personal
+        
+         #Volver al catalogo
+          
+          *goto biblioteca
+          
+          
+    
+    #Resonancia
+      
+      Despiertas en la estación de trenes, hasta que recibes una llamada desconocida que cambiará tu percepción de las reglas del juego. 
+      
+      tiempo de lectura 4 hrs
+      
+      *choice
+        
+        #Leer
+      
+          *goto_scene begin_matrix
+        
+        #Volver al catalogo
+          
+          *goto biblioteca
+        
+        
+    #Integridad
+      
+      Un libro para conseguir lo que queremos en nuestras relaciones. Vivir alineado con nuestros valores y despertar confianza en los demás. 
+      
+      *goto_scene start_3
+      
+      
+    #Ver los libros bloqueados
+       
+       3 Mitos griegos en la actualidad
+       
+       Nadie quiere leer tu basura
+       
+       El silencio de la mayoría
+       
+       El programa del hombre auténtico 
+       
+       *choice
+         
+         #Volver a la lista disponible
+       
+          *goto biblioteca
+         
+         #Salir al patio por una hora
+           
+           *set horas -1
+           
+           Patio está tranqulo. No hay moros en la costa. 
+           
+           *goto_scene biblio
+       
+       
+       
+       
+          
+  #Ir a mensajes
+   
+    *set msg_step +1
+    
+    *goto_scene msg
+   
+   

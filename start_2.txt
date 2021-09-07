@@ -1,0 +1,18 @@
+"todos los caminos no conducen a ninguna parte,
+
+Simplemente hay unos que tienen corazon y otros que no"
+
+Carlos Castañeda. 
+
+*choice
+  
+  #Volver al inicio
+    
+    *goto_scene startup
+  
+  #Volver a la biblioteca
+    
+    *goto_scene biblio
+    
+    
+  
