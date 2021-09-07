@@ -1,7 +1,7 @@
 # messages_choice
 
 ## About 
-Messages of the Game is a ChoiceScript self-help game in development+
+Messages of the Game is a ChoiceScript self-help game in development. Ideas from Pickup and self-development cultures. 
 
 ## Acerca de: 
 
@@ -14,7 +14,7 @@ compiled.html en cualquier navegador o en http://game.ricardoarellano.cl si est�
 
 ### Para editar
 
-Para editar necesitas el IDE, Lo pueden descargar en : http://choiceofgames.com 
+Para editar y depurar necesitas el IDE, Lo pueden descargar en : http://choiceofgames.com 
 
 Clonar e Importar desde la carpeta. 
 
@@ -29,14 +29,19 @@ El código es básico
 #chocename : Para el título de una elección que va en el menú
 
 *label labelname : fija un punto en el flujo para retornar
+
 *goto labelname: vuelve a ese punto
+
 *if 
+
 *else
 
 *create stat 0 : Para crear una variable
+
 *set stat +1: Para asignar
 
 *finish : Para terminar el juego
+
 *goto_scene file: Para ir a otra página o capítulo. 
 
 ## Contribuciones
