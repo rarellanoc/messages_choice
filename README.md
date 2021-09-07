@@ -1,9 +1,18 @@
 # messages_choice
+
+## About 
 Messages of the Game is a ChoiceScript self-help game in development+
+
+## Acerca de: 
 
 Mensajes del Juego es un juego basado en texto creado con ChoiceScript, que permite crear juegos simples de decisiones basadas en texto. 
 
-Para jugar: compiled.html 
+### Para jugar
+
+compiled.html en cualquier navegador o en http://game.ricardoarellano.cl si están desde un móvil. 
+
+
+### Para editar
 
 Para editar necesitas el IDE, Lo pueden descargar en : http://choiceofgames.com 
 
@@ -13,9 +22,7 @@ Feedback y contribuciones bienvenidas.
 
 El código es básico
 
-Las palabras reservadas principales son:
-
-
+### Principales comandos del lenguaje
 
 *choice: Para separar el flujo
 
@@ -32,8 +39,9 @@ Las palabras reservadas principales son:
 *finish : Para terminar el juego
 *goto_scene file: Para ir a otra página o capítulo. 
 
+## Contribuciones
 
-Puedes aportar en la narrativa, en los conceptos e incluso en el arte del juego si te llama. 
+Puedes aportar en la narrativa, en los conceptos e incluso en el arte del juego si te llama el concepto o la mecánica. 
 
 Suerte.
 
