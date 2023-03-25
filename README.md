@@ -1,53 +1,80 @@
-# messages_choice
-
-## About 
-Messages of the Game is a ChoiceScript self-help game in development. Ideas from Pickup and self-development cultures. 
-
-## Acerca de: 
-
-Mensajes del Juego es un juego basado en texto creado con ChoiceScript, que permite crear juegos simples de decisiones basadas en texto. 
-
-### Para jugar
-
-compiled.html en cualquier navegador o en http://game.ricardoarellano.cl si están desde un móvil. 
+# messages_choice v0.2
 
 
-### Para editar
+## About:
 
-Para editar y depurar necesitas el IDE, Lo pueden descargar en : http://choiceofgames.com 
+This is a 'krino.ai' chatbot the 'fruna' way. 
 
-Clonar e Importar desde la carpeta. 
+### To edit the flow
 
-Feedback y contribuciones bienvenidas. 
+To edit the narrative or sequence of responses it is better using the IDE. github.com/ChoicescriptIDE/
 
-El código es básico
+Download (or clone the project) and Import the txt files from the folder.
 
-### Principales comandos del lenguaje
+Export to HTML if needed. 
 
-*choice: Para separar el flujo
+## The surprise
 
-#chocename : Para el título de una elección que va en el menú
+What if we took a ChoiceScript 'game' or decision narrative and mixed it with another, minimalist chatbot-like interface?
 
-*label labelname : fija un punto en el flujo para retornar
+Many (non-intelligent) chatbots are simply decision trees, chocies, which can be done with ChoiceScript (and easier with the IDE).
 
-*goto labelname: vuelve a ese punto
+The new thing is the interface with p5.js (processing.org for the web). A new sketch, that you can edit too.
 
-*if 
+# Up and running
+
+1. $ cd into the folder
+2. $ python -m SimpleHTTPServer
+3. Open http://localhost:8000/compiled_mod.html and play.
+
+### Cheatsheet: Create a narrative from scratch
+
+*choice: To separate the flow
+
+#chocename : _For the title of a choice that goes in the menu_
+
+*label labelname : sets a point in the stream to return to
+
+*goto labelname: return to that point
+
+*if
 
 *else
 
-*create stat 0 : Para crear una variable
+*create stat 0 : To create a variable
 
-*set stat +1: Para asignar
+*set stat +1: To assign to variable
 
-*finish : Para terminar el juego
+*finish : To finish the tree or game
 
-*goto_scene file: Para ir a otra página o capítulo. 
+*goto_scene file: To go to another page or chapter.
 
-## Contribuciones
+## changelog 0.2
 
-Puedes aportar en la narrativa, en los conceptos e incluso en el arte del juego si te llama el concepto o la mecánica. 
+1. Create a complete or logical ChoiceScript sequence or game. 
+2. Export into a standalone HTML file. 
+3. Tweak like 3 lines of that file. See configuration. 
+4. Add the p5 sketch. See configuration.
+5. $cd into the folder and $ python -m SimpleHTTPServer (or any web server)
+6. Open in your browser. 
 
-Suerte.
 
-Rick. 
+## configuration needed (if you export a new file).
+
+add: 
+
+<script src="p5.min.js"></script>
+<script src="sketch.js"></script>
+
+edit: 
+
+shouldSlide = false
+container1.style.opacity = 0; 
+form.setAttribute("id", "formulario"); 
+<body><div class="container" id="container1" style="opacity:0">
+
+## Contributions
+
+I don't have a plan of attack right now.
+
+Rick.
