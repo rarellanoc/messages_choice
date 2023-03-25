@@ -22,9 +22,13 @@ Many (non-intelligent) chatbots are simply decision trees, chocies, which can be
 The new thing is the interface with p5.js (processing.org for the web). A new sketch, that you can edit too.
 
 # Up and running
+```rb
 
-1. $ cd into the folder
+1. $ cd messages_choice
 2. $ python -m SimpleHTTPServer
+
+```
+
 3. Open http://localhost:8000/compiled_mod.html and play.
 
 ### Cheatsheet: Create a narrative from scratch
@@ -61,24 +65,32 @@ The new thing is the interface with p5.js (processing.org for the web). A new sk
 
 ## configuration needed (if you export a new file).
 
-add: 
+add inside head:
+```rb
 
   <script src="p5.min.js"></script>
   
   <script src="sketch.js"></script>
 
-  form.setAttribute("id", "formulario"); 
+```
 
+edit opacity (where you can find it): 
 
-edit: 
-
+```rb
 
   <body><div class="container" id="container1" style="opacity:0">
 
   shouldSlide = false
   
   container1.style.opacity = 0; 
+  
+```
 
+add to form (script):
+
+```rb
+form.setAttribute("id", "formulario"); 
+```
 
 
 ## Contributions
