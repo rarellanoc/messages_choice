@@ -63,15 +63,23 @@ The new thing is the interface with p5.js (processing.org for the web). A new sk
 
 add: 
 
-<script src="p5.min.js"></script>
-<script src="sketch.js"></script>
+  <script src="p5.min.js"></script>
+  
+  <script src="sketch.js"></script>
+
+  form.setAttribute("id", "formulario"); 
+
 
 edit: 
 
-shouldSlide = false
-container1.style.opacity = 0; 
-form.setAttribute("id", "formulario"); 
-<body><div class="container" id="container1" style="opacity:0">
+
+  <body><div class="container" id="container1" style="opacity:0">
+
+  shouldSlide = false
+  
+  container1.style.opacity = 0; 
+
+
 
 ## Contributions
 
