@@ -74,6 +74,15 @@ add inside head:
 
 ```
 
+or try the new look and feel instead of sketch:
+
+```rb
+  
+  <script src="sketch2.js"></script>
+
+```
+
+
 edit opacity (where you can find it): 
 
 ```rb
