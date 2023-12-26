@@ -31,6 +31,18 @@ The new thing is the interface with p5.js (processing.org for the web). A new sk
 
 3. Open http://localhost:8000/compiled_mod.html and play.
 
+
+or if you have a mac and don't have preinstalled python, copy the folder contents to this path with sudo:
+```rb
+
+sudo cp file_needed /Library/WebServer/Documents/.
+
+```
+
+3. Open http://localhost/automotriz2.html
+
+
+
 ### Cheatsheet: Create a narrative from scratch
 
 *choice: To separate the flow
