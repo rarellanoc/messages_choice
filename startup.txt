@@ -1,33 +1,43 @@
-*title Guita Carros
-*author Rick
-*scene_list
-  startup
+*title Mensajes del juego
+*author Rick Arellano
+*comment your code goes here
 
-*create leadership 0
+*create money 30000
+*create blaming_it 0
+*create oblivious 0
+*create touch_points 0
+*create horas 12
+*create msg_count 1
+*create msg_step 0
 
-Guita carros - demo automotora
+Hola. 
 
-¿Eres?
+Hice este juego tipo árbol de decisiones para llevar contenido de desarrollo personal de una manéra mas didáctica. 
+
+Si estás en la demo, hazme llegar tu feedback para seguir mejorándolo. 
+
+Espero te agrade. 
+
+
+
+Rick.
+
+
 
 *choice
-  #Automotora
-    Elegir por 
+  
+  #Iniciar
+    
+    *goto_scene msg
+  
+  #Ver copyright
+   
+    MENSAJES DEL JUEGO
+    Version 0.1 demo pública. 
+    Todos los derechos reservados - 2021 Rick Arellano
+    
     *choice
-      #Marca
-        *choice
-          #Mazda
-            *finish
-          #Chevrolet
-            *finish
-      #Segmento objetivo
-        *choice
-          #Sobre 30.000 USD
-            *finish
-          #Bajo 30.000 USD
-            *finish
-  #Tengo un auto para vender
-    *choice
-      #Subir fotos e info del auto
-        *finish
-      #Ver el estado del marketplace
-        *finish
+      
+      #Volver
+    
+        *goto_scene startup
