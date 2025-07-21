@@ -1,0 +1,33 @@
+*title Guita Carros
+*author Rick
+*scene_list
+  startup
+
+*create leadership 0
+
+Guita carros - demo automotora
+
+¿Eres?
+
+*choice
+  #Automotora
+    Elegir por 
+    *choice
+      #Marca
+        *choice
+          #Mazda
+            *finish
+          #Chevrolet
+            *finish
+      #Segmento objetivo
+        *choice
+          #Sobre 30.000 USD
+            *finish
+          #Bajo 30.000 USD
+            *finish
+  #Tengo un auto para vender
+    *choice
+      #Subir fotos e info del auto
+        *finish
+      #Ver el estado del marketplace
+        *finish
